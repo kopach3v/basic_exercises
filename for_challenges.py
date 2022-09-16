@@ -1,8 +1,6 @@
 # Задание 1
 # Необходимо вывести имена всех учеников из списка с новой строки
 
-from itertools import count
-from operator import index
 
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
