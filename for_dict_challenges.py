@@ -12,7 +12,16 @@ students = [
     {'first_name': 'Маша'},
     {'first_name': 'Петя'},
 ]
-# ???
+count_students = {}
+for student in students:
+    if student['first_name'] not in count_students.keys():
+        count_students[student['first_name']] = 1
+    else:
+        count_students[student['first_name']] += 1
+
+for name, count in count_students.items():
+    print(f'{name}: {count}')
+    
 
 
 # Задание 2
