@@ -12,7 +12,16 @@ students = [
     {'first_name': 'Маша'},
     {'first_name': 'Петя'},
 ]
-# ???
+count_students = {}
+for student in students:
+    if student['first_name'] not in count_students.keys():
+        count_students[student['first_name']] = 1
+    else:
+        count_students[student['first_name']] += 1
+
+for name, count in count_students.items():
+    print(f'{name}: {count}')
+    
 
 
 # Задание 2
@@ -26,7 +35,15 @@ students = [
     {'first_name': 'Маша'},
     {'first_name': 'Оля'},
 ]
-# ???
+count_students = {}
+for student in students:
+    if student['first_name'] not in count_students.keys():
+        count_students[student['first_name']] = 1
+    else:
+        count_students[student['first_name']] += 1
+
+often_name = max(count_students, key=count_students.get)
+print(f'Самое частое имя среди учеников: {often_name}')
 
 
 # Задание 3
@@ -34,7 +51,6 @@ students = [
 # Пример вывода:
 # Самое частое имя в классе 1: Вася
 # Самое частое имя в классе 2: Маша
-
 school_students = [
     [  # это – первый класс
         {'first_name': 'Вася'},
@@ -51,7 +67,20 @@ school_students = [
         {'first_name': 'Саша'},
     ],
 ]
-# ???
+
+for num, group in enumerate(school_students, start=1):
+    count_students = {}
+    
+    
+    for s in group:
+        if s['first_name'] not in count_students.keys():
+            count_students[s['first_name']] = 1
+        else:
+            count_students[s['first_name']] += 1
+    often_name = max(count_students, key=count_students.get)
+    print(f'Самое частое имя в классе {num} : {often_name}' )
+
+
 
 
 # Задание 4
